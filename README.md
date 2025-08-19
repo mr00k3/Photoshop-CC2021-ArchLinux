@@ -18,8 +18,6 @@
 
 This git repo contains an installer for photoshop CC 2021 on linux with wine.
 
-[CC 2021](https://github.com/MiMillieuh/Photoshop-CC2022-Linux/releases/tag/2.1.3) Works almost like on Windows
-
 ![Screenshot from 2022-05-17 00-02-27](.github/screenshot.png)
 
 *File download is about 2GB*
@@ -38,6 +36,7 @@ This git repo contains an installer for photoshop CC 2021 on linux with wine.
 
 **CLI:**
 
+`git clone https://github.com/mr00k3/Photoshop-CC2021-ArchLinux`
 `sh installps21.sh /path/to/your/install/folder`
 
 **Camera Raw**
