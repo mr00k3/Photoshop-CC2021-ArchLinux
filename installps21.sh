@@ -2,7 +2,7 @@
 # This script is a modified version of the original script by LinSoftWin
 
 if [ "$1" = '' ]; then
-    echo "You are missing path where to install photoshop eg. "/home/user/""
+    echo "Error: You are missing path where to install photoshop eg. "/home/user/""
     exit 1
 fi
 
@@ -12,11 +12,17 @@ read wantdeps
 if [ "$wantdeps" == "y" ]; then
     echo "Installing Dependencies"
     sudo pacman -Sy 
-    sudo pacman -S wine zenity appmenu-gtk-module tar wget curl
+    sudo pacman -S wine appmenu-gtk-module tar wget curl
 else
     echo "Skipping installing dependencies"
 fi
 
+if [ ! -f "AdobePhotoshop2021.tar.xz" ]; then
+    echo "Error: Please download AdobePhotoshop2021.tar.xz to script dir"
+    exit 1
+fi
+
+sleep 10000
 mkdir $1/Adobe-Photoshop
 
 wget  https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks
@@ -79,3 +85,5 @@ echo 'Categories=Graphics;Photography;' >> ~/.local/share/applications/photoshop
 echo 'Icon=$HOME/.local/share/icons/photoshop.png' >> ~/.local/share/applications/photoshop.desktop
 echo 'MimeType=image/psd;image/x-psd;' >> ~/.local/share/applications/photoshop.desktop
 echo 'StartupWMClass=photoshop.exe' >> ~/.local/share/applications/photoshop.desktop
+
+echo "Photoshop installed!"
