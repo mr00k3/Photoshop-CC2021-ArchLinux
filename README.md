@@ -36,8 +36,8 @@ This git repo contains an installer for photoshop CC 2021 on linux with wine.
 
 **CLI:**
 
-`git clone https://github.com/mr00k3/Photoshop-CC2021-ArchLinux`
-`sh installps21.sh /path/to/your/install/folder`
+`git clone https://github.com/mr00k3/Photoshop-CC2021-ArchLinux` <br>
+`sh installps21.sh /path/to/your/install/folder` <br>
 
 **Camera Raw**
 You can install Camera Raw this way:
