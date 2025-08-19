@@ -1,5 +1,5 @@
 # Photoshop-CC2021-ArchLinux
-# Dont use it now script is not ready now
+
 ### In this fork i will focus on Arch Linux installation of ps21 and some improvements to install script
 ### Updated fork. **MUST DOWNLOAD** manually the file AdobePhotoshop2021.tar.xz
 ### Make sure you place AdobePhotoshop2021.tar.xz in the same directory as this script
@@ -20,39 +20,44 @@ This git repo contains an installer for photoshop CC 2021 on linux with wine.
 
 [CC 2021](https://github.com/MiMillieuh/Photoshop-CC2022-Linux/releases/tag/2.1.3) Works almost like on Windows
 
-![Screenshot from 2022-05-17 00-02-27](https://user-images.githubusercontent.com/52078885/168690419-274020b0-c993-4b86-a58f-f0f07237aa4f.png)
+![Screenshot from 2022-05-17 00-02-27](.github/screenshot.png)
 
 *File download is about 2GB*
 
 ## Requirements
 
 - wine
-- zenity
 - appmenu-gtk-module
 - tar
 - wget
 - curl
 - All R/W rights on your home folder and the installer folder
-- Vulkan capable GPU or APU (Older GPUs might encounter [This issue #100](https://github.com/MiMillieuh/Photoshop-CC2022-Linux/issues/100))
-(Wine 8.0+ are causing an issue with the windows version see workaround [here](https://github.com/MiMillieuh/Photoshop-CC2022-Linux/issues/94#issuecomment-1426776219))
+- Vulkan capable GPU or APU 
 
 ## Usage: 
 
 **CLI:**
 
-`sh photoshop2021install.sh /path/to/your/install/folder`
+`sh installps21.sh /path/to/your/install/folder`
 
 **Camera Raw**
 You can install Camera Raw this way:
 
 `curl -L "https://download.adobe.com/pub/adobe/photoshop/cameraraw/win/12.x/CameraRaw_12_2_1.exe" > CameraRaw_12_2_1.exe` <br>
-`WINEPREFIX=/Path/To/Your/Photoshop/Install/Adobe-Photoshop wine CameraRaw_12_2_1.exe`
+`WINEPREFIX=/Path/To/Your/Photoshop/Install/Adobe-Photoshop wine CameraRaw_12_2_1.exe` <br>
 
-To use camera raw you need to change a settings
+To use camera raw you may need to change a settings <br>
 Edit -> preferences -> Camera raw... -> performance -> Use graphic processor: Off
 
 If camera raw is sometimes grayed out, just go to: Edit -> preferences -> Tools, and uncheck show Tooltips.
 
+**Troubleshooting**
+
+If script errored use `sh cleanup.sh` then try again 
+
+(Older GPUs might encounter [This issue #100](https://github.com/MiMillieuh/Photoshop-CC2022-Linux/issues/100))
+
+(Wine 8.0+ are causing an issue with the windows version see workaround [here](https://github.com/MiMillieuh/Photoshop-CC2022-Linux/issues/94#issuecomment-1426776219))
 
 **Uninstalling:**
 
